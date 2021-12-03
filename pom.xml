@@ -9,7 +9,7 @@
 		<version>2.5.2</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>nespaper.advertisement.system</groupId>
+	<groupId>newspaper.advertisement.system</groupId>
 	<artifactId>newspaper.advertisement.system</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>online.advertisement.system</name>
