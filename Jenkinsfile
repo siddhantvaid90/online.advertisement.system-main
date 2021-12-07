@@ -34,11 +34,24 @@ steps{
 bat 'mvn test'
 }
 }
-stage('Deploy'){
-steps{
-bat 'java -jar "C:/ProgramData/Jenkins/workspace/OASpipe/target/newspaper.advertisement.system-0.0.1-SNAPSHOT.jar"'
-}
-}
+stage('Create Image')
+ 	{
+ 	steps{
+ 	bat 'docker build -t image4:v1 .'
+ 	}
+ 	}
+ 	stage('Create Container')
+ 	{
+ 	steps{
+ 	bat 'docker container create -p 8088:8088 --name container4 image4:v1'
+ 	}
+ 	}
+ 	stage('Start Container')
+ 	{
+ 	steps{
+ 	bat 'docker start container4'
+ 	}
+ 	}
 
 
 
